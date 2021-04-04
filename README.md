@@ -1,6 +1,6 @@
                              MD Moshiur Rahman
                         Project Name : VIP DIGITAL SHOP
-(Live Link: )
+(Live Link: https://vipdigitalshop-9185.web.app/)
 
 1. Use React Router,
 2. React Bootstrap,
@@ -13,8 +13,3 @@
 9. Mobile version responsive
 10. Product Delete
 11. .gitignore
-https://github.com/Porgramming-Hero-web-course/full-stack-client-moshiur9185
-
-https://github.com/Porgramming-Hero-web-course/full-stack-server-moshiur9185
-
-https://vipdigitalshop-9185.web.app/
