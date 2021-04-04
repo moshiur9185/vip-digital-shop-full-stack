@@ -127,7 +127,7 @@ const AddProductSlider = () => {
                 </div>
                 <Divider />
                 <List>
-                    <h4><a href="/addProduct/admin"><FontAwesomeIcon icon={faThLarge} /> Manage Product</a></h4>
+                    <h4><a href="/admin"><FontAwesomeIcon icon={faThLarge} /> Manage Product</a></h4>
                     <h4><a href="/addProduct"><FontAwesomeIcon icon={faPlus} /> Add Products</a></h4>
                     <h4><a href="/"><FontAwesomeIcon icon={faEdit} /> Edit Product</a></h4>
                 </List>
