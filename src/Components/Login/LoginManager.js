@@ -4,6 +4,11 @@ import firebaseConfig from './firebase.config';
 import jwt_decode from 'jwt-decode';
 import "firebase/auth"
 
+// export const initializeLoginFramework = () => {
+//   if(firebase.apps.length === 0) {
+      
+//   }
+// }
 const app = firebase.initializeApp(firebaseConfig);
 export const auth = app.auth()
 
@@ -39,16 +44,60 @@ export const handleSignOut = () => {
     console.log(errorMessage);
   });
 }
+// reset password
+export const resetPassword = (email) => {
+  let auth = firebase.auth();
+  auth
+    .sendPasswordResetEmail(email)
+    .then(
+          document.getElementById("resPass").innerText = "Reset password link has been sent to your email address"
+      )
+};
+// Create user with email and password
+export const createUserWithEmailAndPassword = (name, email, password) => {
+  return firebase.auth().createUserWithEmailAndPassword(email, password)
+  .then( res => {
+    const newUserInfo = res.user;
+    newUserInfo.error = '';
+    newUserInfo.success = true;
+    updateUserName(name);
+    return newUserInfo;
+  })
+  .catch( error => {
+    const newUserInfo = {};
+    newUserInfo.error = error.message;
+    newUserInfo.success = false;
+    return newUserInfo;
+  });
+}
+
+
+// // sign in with email and password
+export const signInWithEmailAndPassword = (email, password) =>{
+  return firebase.auth().signInWithEmailAndPassword(email, password)
+  .then(res => {
+    const newUserInfo = res.user;
+    newUserInfo.error = '';
+    newUserInfo.success = true;
+    return newUserInfo;
+  })
+  .catch(function(error) {
+    const newUserInfo = {};
+    newUserInfo.error = error.message;
+    newUserInfo.success = false;
+    return newUserInfo;
+  });
+}
 
 
 // Update user name
-// const updateUserName = name =>{
-//   const user = firebase.auth().currentUser;
+const updateUserName = name =>{
+  const user = firebase.auth().currentUser;
 
-//   user.updateProfile({
-//     displayName: name
-//   })
-// };
+  user.updateProfile({
+    displayName: name
+  })
+};
 
 
 // Bearer Token for checking individual orders
