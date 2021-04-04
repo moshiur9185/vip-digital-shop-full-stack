@@ -11,7 +11,7 @@ const Order = () => {
     const { email } = loggedInUser;
     const [orderProducts, setOrderProducts] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/orderProducts/${email}`)
+        fetch(`https://secure-lowlands-80297.herokuapp.com/orderProducts/${email}`)
             .then(res => res.json())
             .then(data => setOrderProducts(data))
             .catch(err => {
@@ -22,7 +22,7 @@ const Order = () => {
   
     useEffect(() => {
         const orderProductsId = orderProducts.map(pd => pd.productId)
-        fetch('http://localhost:5000/productsById', {
+        fetch('https://secure-lowlands-80297.herokuapp.com/productsById', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -44,7 +44,7 @@ const Order = () => {
             quantity:1,
             createDate: new Date()
         }
-        fetch('http://localhost:5000/checkoutOrder', {
+        fetch('https://secure-lowlands-80297.herokuapp.com/checkoutOrder', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

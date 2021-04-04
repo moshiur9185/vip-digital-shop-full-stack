@@ -14,7 +14,7 @@ const AddProduct = () => {
           price : data.price,
           imgURL : imgURL
       };
-      const url = `http://localhost:5000/addProduct`;
+      const url = `https://secure-lowlands-80297.herokuapp.com/addProduct`;
 
       fetch(url, {
           method : 'POST',

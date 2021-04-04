@@ -18,7 +18,7 @@ const Products = (props) => {
                email,
                productId: _id
            }
-           fetch('http://localhost:5000/addOrder', {
+           fetch('https://secure-lowlands-80297.herokuapp.com/addOrder', {
                method: 'POST',
                headers: {
                    'content-type': 'application/json'

@@ -4,11 +4,6 @@ import firebaseConfig from './firebase.config';
 import jwt_decode from 'jwt-decode';
 import "firebase/auth"
 
-// export const initializeLoginFramework = () => {
-//   if(firebase.apps.length === 0) {
-      
-//   }
-// }
 const app = firebase.initializeApp(firebaseConfig);
 export const auth = app.auth()
 

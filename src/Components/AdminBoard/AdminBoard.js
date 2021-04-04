@@ -8,13 +8,13 @@ import AddProductSlider from '../AddProductSlider/AddProductSlider';
 const AdminBoard = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://secure-lowlands-80297.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
 
     const deleteEvent = id =>{
-        fetch(`http://localhost:5000/deleteEvent/${id}`,{
+        fetch(`https://secure-lowlands-80297.herokuapp.com/deleteEvent/${id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())
