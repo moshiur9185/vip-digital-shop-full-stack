@@ -27,7 +27,7 @@ const Header = () => {
                             <Link className="nav-link text-white" to="/home">Home</Link>
                             <Link className="nav-link text-white" to="/order">Order</Link>
                             <Link className="nav-link text-white" to="/home">Deals</Link>
-                            <Link className="nav-link text-white" to="/addProduct">Admin</Link> 
+                            <Link className="nav-link text-white" to="/dashboard">Dashboard</Link> 
                         </Nav>
                         {
                     loggedInUser.email || isLogged ? <button style={{textDecoration: "none", color: "white" }} className="nav-item btn px-4 h-75 " onClick={signOut}> Sign Out</button> :
