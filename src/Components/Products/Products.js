@@ -37,9 +37,8 @@ const Products = (props) => {
     })
 
   return (
-    <div className="container" >
-      <div className="col-lg-4 col-md-6 col-sm-12 cards-container mt-4" >
-        <Card style={{ width: "18rem"}}>
+      <div className="col-lg-3 col-md-4 col-sm-6 mt-4" >
+        <Card className="cards-container" style={{ width: "18rem"}}>
           <Card.Img variant="top" style={{ height: "14rem"}} src={imgURL} />
           <Card.Body>
             <Card.Title>{name}</Card.Title>
@@ -47,21 +46,20 @@ const Products = (props) => {
               <span
                 style={{
                   fontSize: "20px",
-                  color: "green",
+                  color: "#2BD984",
                   fontWeight: "bold",
                   marginRight: "6rem",
                 }}
               >
                 ${price}
               </span>
-              <Button variant="primary" onClick={() => auth.currentUser?.email ? buyNow(_id) : history.push('/login')}>
+              <button className="btn button" onClick={() => auth.currentUser?.email ? buyNow(_id) : history.push('/login')}>
                   Buy Now
-              </Button>
+              </button>
             </div>
           </Card.Body>
         </Card>
       </div>
-    </div>
   );
 };
 

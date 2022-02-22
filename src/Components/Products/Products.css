@@ -1,3 +1,9 @@
 .cards-container{
-   float:left;
+   border-radius: .5rem !important;
+   box-shadow: 5px 5px 10px #000000;
+}
+.button{
+   background: #2BD984;
+   color: #FFFFFF !important;
+   font-weight: 500 !important;
 }

@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState} from "react";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-slideshow-image/dist/styles.css'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Home from "./Components/Home/Home";
 import Checkout from "./Components/CheckOut/CheckOut";
@@ -10,6 +11,7 @@ import AdminBoard from "./Components/AdminBoard/AdminBoard";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import { auth } from "./Components/Login/LoginManager";
 import OrderDetails from "./Components/OrderDetails/OrderDetails";
+import Products from "./Components/Products/Products";
  
 export const UserContext = createContext();
 function App() {
@@ -42,6 +44,9 @@ function App() {
               <PrivateRoute path="/order">
                 <OrderDetails/>
               </PrivateRoute>
+              <Route path="/product">
+                <Home/>
+              </Route>
               <PrivateRoute path="/checkOut">
                 <Checkout />
               </PrivateRoute>

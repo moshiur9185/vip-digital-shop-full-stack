@@ -18,7 +18,7 @@ const Header = () => {
   const loggedUser = loggedInInfo()
   return (
     <div>
-      <Navbar bg="success" expand="lg">
+      <Navbar className="brand-class" expand="lg">
                 <Container>
                     <Navbar.Brand href="/home" style={{color: 'white'}}>VIP DIGITAL SHOP</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -30,8 +30,8 @@ const Header = () => {
                             <Link className="nav-link text-white" to="/addProduct">Admin</Link> 
                         </Nav>
                         {
-                    loggedInUser.email || isLogged ? <button style={{textDecoration: "none", color: "white" }} className="nav-item btn px-4 h-75  bg-secondary" onClick={signOut}> Sign Out</button> :
-                    <Link to="/login"><button style={{textDecoration: "none", color: "white" }} className="nav-item btn px-4 h-75 bg-secondary">Sign In</button></Link>
+                    loggedInUser.email || isLogged ? <button style={{textDecoration: "none", color: "white" }} className="nav-item btn px-4 h-75 " onClick={signOut}> Sign Out</button> :
+                    <Link to="/login"><button style={{textDecoration: "none", color: "white" }} className="nav-item btn px-4 h-75 ">Sign In</button></Link>
                 } 
                     </Navbar.Collapse>
                 </Container>
