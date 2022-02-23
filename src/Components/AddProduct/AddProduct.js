@@ -21,7 +21,7 @@ const AddProduct = () => {
           headers : { 'Content-Type': 'application/json'},
           body : JSON.stringify(productData)
       })
-      .then(res => console.groupCollapsed('server site response', res))
+      .then(res => alert('Product Update Successful'))
   };
 
   const handleImageUpload =(event)=>{
@@ -46,17 +46,16 @@ const AddProduct = () => {
             <div className="col-md-8 mt-5">
                 <h1 className="mt-4 text-center">Add Product</h1>
                 <form onSubmit={handleSubmit(onSubmit)}>
-
                     <div className="addProduct">
-                        <input name="name" placeholder="product name" ref={register} />
+                        <input name="name" placeholder="product name" ref={register} required/>
                         <br />
-                        <input name="price" placeholder="price" ref={register} />
+                        <input name="price" placeholder="price" ref={register} required/>
                         <br />
                         <div className="container-img">
-                        <input className="upload-box " type="file" onChange={handleImageUpload} />
+                        <input className="upload-box " type="file" onChange={handleImageUpload} required/>
                         </div>
                         <br />
-                        <input className="btn btn-success" type="submit" />
+                        <a href="/addProduct"><input className="btn btn-success" type="submit" /></a>
                     </div>
                 </form>
             </div>

@@ -126,10 +126,10 @@ const AddProductSlider = () => {
                     </IconButton>
                 </div>
                 <Divider />
-                <List>
-                    <h4><a href="/admin"><FontAwesomeIcon icon={faThLarge} /> Manage Product</a></h4>
-                    <h4><a href="/addProduct"><FontAwesomeIcon icon={faPlus} /> Add Products</a></h4>
-                    <h4><a href="/"><FontAwesomeIcon icon={faEdit} /> Edit Product</a></h4>
+                <List className="ml-5">
+                    <h4><Link to="/admin"><FontAwesomeIcon icon={faThLarge} /> Manage Product</Link></h4>
+                    <h4><Link to="/addProduct"><FontAwesomeIcon icon={faPlus} /> Add Products</Link></h4>
+                    <h4><Link to="/"><FontAwesomeIcon icon={faEdit} /> Edit Product</Link></h4>
                 </List>
 
             </Drawer>
